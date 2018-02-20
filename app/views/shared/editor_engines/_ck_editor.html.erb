@@ -7,5 +7,10 @@
         CKEDITOR.replace("<%= id %>");
       }
     <% end %>
+    <% ids.each do |id| %>
+      if ($(".<%= id %>").length > 0) {
+        CKEDITOR.replace($(".<%= id %>"));
+      }
+    <% end %>
   });
 </script>
